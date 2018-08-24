@@ -55,18 +55,10 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- driver Oracle -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0</version>
-		</dependency>
-		
-		<!-- Tomcat embed do Spring Boot -->		
-		<dependency>
-		    <groupId>org.apache.tomcat.embed</groupId>
-		    <artifactId>tomcat-embed-jasper</artifactId>
-		    <scope>provided</scope>
 		</dependency>
 
 	</dependencies>

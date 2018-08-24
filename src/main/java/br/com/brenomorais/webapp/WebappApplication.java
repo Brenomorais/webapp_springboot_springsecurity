@@ -8,5 +8,9 @@ public class WebappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebappApplication.class, args);
+		System.out.println("..................");
+		System.out.println(":: WebApp Start ::");
+		System.out.println("..................");
+
 	}
 }
