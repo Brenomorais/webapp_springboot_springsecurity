@@ -29,6 +29,9 @@ public class UsuarioEntity implements Serializable {
 
 	@Column(name = "ds_nome")
 	private String nome;
+	
+	@Column(name="ds_login")
+	private String login;
 
 	@Column(name = "ds_login")
 	private String senha;
@@ -56,6 +59,14 @@ public class UsuarioEntity implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}	
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getSenha() {
