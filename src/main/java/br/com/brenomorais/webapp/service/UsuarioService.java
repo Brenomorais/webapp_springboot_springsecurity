@@ -2,7 +2,7 @@ package br.com.brenomorais.webapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
- 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
- 
+
 import br.com.brenomorais.webapp.entity.GrupoEntity;
 import br.com.brenomorais.webapp.entity.PermissaoEntity;
 import br.com.brenomorais.webapp.entity.UsuarioEntity;
@@ -139,6 +139,8 @@ public class UsuarioService  implements UserDetailsService {
 		List<UsuarioModel> usuariosModel = new ArrayList<UsuarioModel>();
  
 		List<UsuarioEntity> usuariosEntity = this.usuarioRepository.findAll();
+		
+		
  
 		usuariosEntity.forEach(usuarioEntity ->{
  

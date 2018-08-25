@@ -12,11 +12,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Table(name = "tb_usuario", schema = "breno")
 @Entity
+@Table(name = "tb_usuario", schema = "breno")
+@NamedQuery(name = "UsuarioEntity.findAll", query="select u from UsuarioEntity u order by u.codigo")
 public class UsuarioEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;

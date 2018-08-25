@@ -107,6 +107,20 @@ public class UsuarioController {
 		/*REDIRECIONANDO PARA UM NOVO CADASTRO*/
 		return modelAndView;
 	}
+	
+	/***
+	 * CONSULTA TODOS USUÁRIOS CADASTRADOS NO SISTEMA	
+	 */
+	@RequestMapping(value="/consultar", method= RequestMethod.GET)	
+	public ModelAndView consultar(Model model) {
+ 
+		/*CONSULTA USUÁRIOS CADASTRADOS*/
+		model.addAttribute("usuariosModel", this.usuarioService.consultarUsuarios());
+ 
+		/*RETORNA A VIEW*/
+	    return new ModelAndView("consultarCadastros");
+	}
+	
 }
 
 
