@@ -33,10 +33,10 @@ public class UsuarioEntity implements Serializable {
 	@Column(name="ds_login")
 	private String login;
 
-	@Column(name = "ds_login")
+	@Column(name = "ds_senha")
 	private String senha;
 
-	@Column(name = "ds_senha")
+	@Column(name = "fl_ativo")
 	private boolean ativo;
 
 	@JoinTable(name = "TB_USUARIO_X_GRUPO", joinColumns = {
