@@ -7,7 +7,7 @@
 	<groupId>br.com.brenomorais</groupId>
 	<artifactId>webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>webapp</name>
 	<description>Web App Spring Boot</description>
@@ -73,6 +73,14 @@
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0</version>
 		</dependency>
+
+		<!-- Tomcat embed do Spring Boot -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 
 	</dependencies>
 
