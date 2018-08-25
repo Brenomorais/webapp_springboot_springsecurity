@@ -1,4 +1,4 @@
-package br.com.brenomorais.webapp.repositoy;
+package br.com.brenomorais.webapp.repository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package br.com.brenomorais.webapp.repositoy;
+package br.com.brenomorais.webapp.repository;
 
 import java.util.List;
 
@@ -12,5 +12,9 @@ import br.com.brenomorais.webapp.entity.UsuarioEntity;
 public interface GrupoRepository  extends JpaRepository<GrupoEntity, Long>{
 	
 	List<GrupoEntity> findByUsuariosIn(UsuarioEntity usuarioEntity);
+	
+	default GrupoEntity findOne(Long codigo) { 
+        return (GrupoEntity) findById(codigo).orElse(null); 
+    } 
 
 }
