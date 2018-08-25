@@ -24,8 +24,7 @@ public class UsuarioModel {
 	private List<Long> grupos;
 
 	public UsuarioModel() {
-
-		System.out.println("Passei " + LocalDate.now());
+		System.out.println(">> Log Data de cadastro: " + LocalDate.now());
 	}
 
 	public UsuarioModel(Long codigo, String nome, String login, String senha, boolean ativo, List<Long> grupos) {
