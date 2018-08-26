@@ -26,6 +26,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -76,15 +77,16 @@
 
 		<!-- Tomcat embed do Spring Boot -->
 		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-
+		
 	</dependencies>
 
 	<build>
+		<!-- Gerar o War sem incluir os números de versão apenas o nome -->
+	 	<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -92,6 +94,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
