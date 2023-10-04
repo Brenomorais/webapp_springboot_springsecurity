@@ -28,16 +28,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				/*
 				 * DETERMINA QUE PARA REALIZAR ESSA REQUEST PRECISA TER UMA DAS PERMISSÕES
-				 * ABAIXO EXEMPLO DA URL: http://localhost:8095/usuario/novoCadastro VEJA QUE EM
-				 * UM ITEM("hasRole('ADMIN')) NÃO ESTOU PASSANDO O PREFIXO ROLE_, ESSE PREFIXO
-				 * NÃO É OBRIGATÓRIO QUANDO USAMOS o hasRole
+				 * ABAIXO EXEMPLO DA URL: http://localhost:port/usuario/novoCadastro VEJA QUE EM
+				 * UM ITEM("hasRole('ADMIN')) 			
 				 */
 				.antMatchers("/usuario/novoCadastro").access("hasRole('ADMIN') or hasRole('ROLE_CADASTROUSUARIO')")
 				/*
 				 * DETERMINA QUE PARA REALIZAR ESSA REQUEST PRECISA TER UMA DAS PERMISSÕES
-				 * ABAIXO EXEMPLO DA URL: http://localhost:8095/usuario/consultar
+				 * ABAIXO EXEMPLO DA URL: http://localhost:port/usuario/consultar
 				 */
-				.antMatchers("/usuario/consultar").access("hasRole('ADMIN') or hasRole('CONSULTAUSUARIO')")
+				.antMatchers("/usuario/consultar").access("hasRole('ADMIN') or hasRole('ROLE_CONSULTAUSUARIO')")
 				/*
 				 * DETERMINA QUE PARA ACESSAR A PÁGINA INICIAL DA APLICAÇÃO PRECISA ESTÁ
 				 * AUTENTICADO
@@ -48,10 +47,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				 * SUCESSO O USUÁRIO DEVE SER REDIRECIONADO PARA
 				 * /home(http://localhost:8095/home)
 				 */
-				.loginPage("/").defaultSuccessUrl("/home", true).permitAll() /*
-																				 * AQUI ESTAMOS INFORMANDO QUE TODOS TEM
-																				 * ACESSO A PÁGINA DE LOGIN
-																				 */
+				.loginPage("/").defaultSuccessUrl("/home", true).permitAll() 
+				
+				/*
+				 * AQUI ESTAMOS INFORMANDO QUE TODOS TEM ACESSO A PÁGINA DE LOGIN
+				 */
+				
 				.and()
 				/*
 				 * AQUI ESTAMOS INFORMANDO QUE QUANDO FOR REDIRECIONADO PARA O LINK
